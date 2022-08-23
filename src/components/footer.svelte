@@ -1,5 +1,5 @@
-<div class="w-full mt-20 px-5">
-<div class="flex justify-between w-full">
+<div class="w-full mt-20 px-10 py-5 bg-gray-200">
+<div class="flex justify-between">
     <div id="address1" class="text-left">
         <h3>UNITED STATES OFFICE</h3>
         <p>456 harlem boulevard <br/>
