@@ -13,7 +13,7 @@ const fetchMyNFTs = async () => {
             name: data.name,
             description: data.description,
             id: index + 1,
-            image: `https://ipfs.moralis.io:2053/ipfs/QmP8itDDxptqdeYo5Bdh6Bn3dWch1y1FvQeNzBCNTVJYch/RocketElevatorsNFTImage_${index + 1}.png`
+            image: data.image
         }
     })
     nft.set(loadedNFT)
