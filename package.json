@@ -24,7 +24,10 @@
 		"vite": "^3.0.4"
 	},
 	"dependencies": {
+		"@lottiefiles/svelte-lottie-player": "^0.2.0",
+		"@metamask/onboarding": "^1.0.1",
 		"bootstrap": "^5.2.0",
+		"svelte-web3": "^3.5.2",
 		"sveltestrap": "^5.9.0"
 	}
 }
