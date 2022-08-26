@@ -7,10 +7,12 @@
 
     let account;
     const openMetamask = async () =>  {
+        defaultEvmStores.setProvider()
         await ethereum.request({ method: 'eth_requestAccounts'}).then(accounts => {
             console.log(accounts)
            account = accounts[0];
             console.log('my account is:',account);
+            console.log("my account isssssss: ", $selectedAccount)
             
             
             ethereum.request({ method: 'eth_getBalance', params: [account, 'latest']}).then( result => {
@@ -32,12 +34,17 @@
             console.log(accounts)
             account = accounts[0];})
         const resp = await fetch(`${url}${account}`);
+        console.log()
         const data = await resp.json();
         console.log("Free NFT? ",data)
         
         freeNFTstatus.set(data)
         console.log("Free NFT STATUS :",($freeNFTstatus))
        
+    }
+
+    const buyNFT = async () => {
+        
     }
 
     
@@ -49,7 +56,7 @@
 
 <div class="flex flex-col justify-center">
 <button on:click={openMetamask} id="connect-button" class="p-2 my-2 text-lg bg-blue-300 text-center rounded-lg shadow-sm hover:shadow-lg">Connect Metamask</button>
-<button  on:click={freeNFTcheck} id="freenft-button" class="p-2 my-2 text-lg bg-red-400 text-center rounded-lg shadow-sm hover:shadow-lg">Get Free NFT</button>
+<!-- <button  on:click={freeNFTcheck} id="freenft-button" class="p-2 my-2 text-lg bg-red-400 text-center rounded-lg shadow-sm hover:shadow-lg">Check for Free NFT</button> -->
 </div>
 
 
@@ -57,6 +64,7 @@
     {#if {freeNFTstatus} == true}
     <div>
          <p>You are eligible for a free NFT</p>
+         <button  id="getfreenft-button" class="p-2 my-2 text-lg bg-blue-300 text-center rounded-lg shadow-sm hover:shadow-lg">Get Free NFT</button>
     </div>
     {:else}
     <div class="">
