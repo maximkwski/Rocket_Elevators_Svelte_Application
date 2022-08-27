@@ -11,7 +11,7 @@
             
             defaultEvmStores.setProvider()
             const url = `https://express-api.codeboxxtest.xyz/NFT/getWalletTokens/`;
-            const wallet_address = `0x1E90cf48F11Dd52802eC7D1AF7082122A6a59312`;
+            // const wallet_address = `0x1E90cf48F11Dd52802eC7D1AF7082122A6a59312`; // wallet with 10nfts to get an example
             fetch(`${url}${$selectedAccount}`).then(resp => resp.json())
             .then(data => {
                 console.log(data)
@@ -29,39 +29,10 @@
                 console.log(error);
             });
            
-    
+            //user need to click on "connect metamask wallet" after a while, if the portfolio page is empty. 
         }
         )
-        
-    
-    // import '../minting/+page.svelte'
-    // import { wallet_address } from "../minting/+page.svelte";
-    // console.log ('my wallet address is:' ,$wallet_address)
 
-
-
-
-
-
-
-
-// const fetchMyNFTs = async () => {
-//     const url = `https://express-api.codeboxxtest.xyz/NFT/getWalletTokens/`;
-//     const wallet_address = `0x1E90cf48F11Dd52802eC7D1AF7082122A6a59312`;
-//     const resp = await fetch(`${url}${wallet_address}`);
-//     const data = await resp.json();
-//     console.log(data)
-//     const loadedNFT = data.map((data, index) => {
-//         return {
-//             name: data.name,
-//             description: data.description,
-//             id: index + 1,
-//             image: data.image
-//         }
-//     })
-//     nft.set(loadedNFT)
-// }
-// fetchMyNFTs();
 
 </script>
 

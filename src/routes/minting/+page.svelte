@@ -43,20 +43,13 @@
        
     }
 
-    const buyNFT = async () => {
-        
-    }
-
-    
-    
-
 </script>
 
 <h1 class="text-4xl text-center my-8 uppercase">NFT Minting Page</h1>
 
 <div class="flex flex-col justify-center">
 <button on:click={openMetamask} id="connect-button" class="p-2 my-2 text-lg bg-blue-300 text-center rounded-lg shadow-sm hover:shadow-lg">Connect Metamask</button>
-<!-- <button  on:click={freeNFTcheck} id="freenft-button" class="p-2 my-2 text-lg bg-red-400 text-center rounded-lg shadow-sm hover:shadow-lg">Check for Free NFT</button> -->
+<button  on:click={freeNFTcheck} id="freenft-button" class="p-2 my-2 text-lg bg-red-400 text-center rounded-lg shadow-sm hover:shadow-lg">Check for Free NFT</button>
 </div>
 
 
